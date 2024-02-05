@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from models.offer import JobOffer
 from models.search import SearchOffer
 from models.responses.apiResponse import ApiResponse
+#from models.validators.IDValidator import validateID
 from common.logging import InternalLogging
 from repositories.offerRepository import OfferRepository
 
@@ -10,7 +11,7 @@ logger = InternalLogging()
 
 
 @router.post("/offers", status_code= 201, response_model= ApiResponse)
-def createOffer(newOffer: JobOffer, repository: OfferRepository = Depends()):
+async def createOffer(newOffer: JobOffer, repository: OfferRepository = Depends()):
     """ Create new offer """
     try:
         if newOffer is None or not isinstance(newOffer, JobOffer):
@@ -24,7 +25,7 @@ def createOffer(newOffer: JobOffer, repository: OfferRepository = Depends()):
         
     
 @router.get("/offers", status_code= 200, response_model=ApiResponse)
-def getAllOffers(limit: int = Query(10, description="Numbers of offers to fetch"), 
+async def getAllOffers(limit: int = Query(10, description="Numbers of offers to fetch"), 
                  repository: OfferRepository = Depends()):
     """ Get list of offers """
     try:
@@ -39,7 +40,7 @@ def getAllOffers(limit: int = Query(10, description="Numbers of offers to fetch"
     
 
 @router.post("/offers/search", status_code= 200, response_model=ApiResponse)
-def getOffersByCriteria(criteria: SearchOffer, 
+async def getOffersByCriteria(criteria: SearchOffer, 
                         limit: int = Query(10, description="Numbers of offers to fetch"), 
                         repository: OfferRepository = Depends()):
     """ Get offer by criteria """
@@ -55,7 +56,7 @@ def getOffersByCriteria(criteria: SearchOffer,
     
 
 @router.get("/offers/{offerID}", status_code= 200, response_model= ApiResponse)
-def getOfferByID(offerID: str, repository: OfferRepository = Depends()):
+async def getOfferByID(offerID: str, repository: OfferRepository = Depends()):
     try:
         result = repository.getByID(offerID)
         if not result:
@@ -68,7 +69,7 @@ def getOfferByID(offerID: str, repository: OfferRepository = Depends()):
     
 
 @router.delete("/offers/{offerID}", status_code=204)
-def deleteOfferByID(offerID: str, repository: OfferRepository = Depends()):
+async def deleteOfferByID(offerID: str, repository: OfferRepository = Depends()):
     " Delete offer by ID "
     try:
         result = repository.deleteByID(offerID)
@@ -80,7 +81,7 @@ def deleteOfferByID(offerID: str, repository: OfferRepository = Depends()):
         
 
 @router.put("/offers/{offerID}", status_code= 204)
-def updateOfferByID(offerID: str, updatedOffer: JobOffer, repository: OfferRepository = Depends()):
+async def updateOfferByID(offerID: str, updatedOffer: JobOffer, repository: OfferRepository = Depends()):
     try:
         result = repository.updateByID(offerID, updatedOffer)
         if not result:
@@ -90,7 +91,7 @@ def updateOfferByID(offerID: str, updatedOffer: JobOffer, repository: OfferRepos
         return generateFailedRespomse(ex)
         
 
-def generateFailedRespomse(exception: Exception) -> ApiResponse:
+async def generateFailedRespomse(exception: Exception) -> ApiResponse:
     """ Return API fail response """
     response = ApiResponse(message="fail", content={"details": str(exception)})
     response.status = exception.status_code if isinstance(exception, HTTPException) else 500
