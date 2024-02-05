@@ -91,7 +91,7 @@ async def updateOfferByID(offerID: str, updatedOffer: JobOffer, repository: Offe
         return generateFailedRespomse(ex)
         
 
-async def generateFailedRespomse(exception: Exception) -> ApiResponse:
+def generateFailedRespomse(exception: Exception) -> ApiResponse:
     """ Return API fail response """
     response = ApiResponse(message="fail", content={"details": str(exception)})
     response.status = exception.status_code if isinstance(exception, HTTPException) else 500

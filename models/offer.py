@@ -1,6 +1,7 @@
 from pydantic import BaseModel, validator
-from typing import Optional
+from typing import Optional, List
 from models.company import Company
+from models.skills import Skills
 from enums.experienceLevel import ExperienceLevel
 from enums.operatingMode import OperatingMode
 from enums.contractType import ContractType
@@ -14,6 +15,8 @@ class JobOffer(BaseModel):
     offerContract: str
     offerOperatingMode: str
     offerSalaryRange: str
+    applyLink: str
+    skills: List[Skills]
     offerCompany: Company
     offerApplications: Optional[list] = []
 
