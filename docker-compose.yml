@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  offer-service:
+    build: . 
+    image: offer-service:1.0
+    environment:
+      - MONGO_HOST=mongo-db
+      - MONGO_DATABASE=asap_db
+      - ALLOWED_HOSTS=http://localhost:8000/api/v1/
+    networks:
+      - dev-network
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo-db
+    restart: always
+
+  mongo-db:
+    image: mongo:latest
+    container_name: mongo-db
+    networks:
+      - dev-network
+    volumes:
+      - mongo_data:/data/db
+      - ./mongo/init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    restart: always
+
+networks:
+  dev-network:
+    driver: bridge
+volumes:
+  mongo_data:
+    driver: local
