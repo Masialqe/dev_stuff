@@ -14,7 +14,11 @@ if (!collectionExists) {
             "offerContractType": "B2B",
             "offerContract": "Full-time",
             "offerOperatingMode": "REMOTE",
-            "offerSalaryRange": "2400-3300USD",
+            "offerSalaryRange": {
+                "currency": "USD",
+                "salaryFrom": 4100,
+                "salaryTo": 6900
+            },
             "applyLink": "https://example.com/apply",
             "skills": [
                 {
@@ -41,7 +45,11 @@ if (!collectionExists) {
             "offerContractType": "INTERNSHIP",
             "offerContract": "Part-time",
             "offerOperatingMode": "ON-SITE",
-            "offerSalaryRange": "2100-2900USD",
+            "offerSalaryRange": {
+                "currency": "PLN",
+                "salaryFrom": 2100,
+                "salaryTo": 2900
+            },
             "applyLink": "https://example.com/apply",
             "skills": [
                 {
@@ -68,7 +76,11 @@ if (!collectionExists) {
             "offerContractType": "PERMANENT",
             "offerContract": "Full-time",
             "offerOperatingMode": "HYBRID",
-            "offerSalaryRange": "2600-3500USD",
+            "offerSalaryRange": {
+                "currency": "PLN",
+                "salaryFrom": 2100,
+                "salaryTo": 2900
+            },
             "applyLink": "https://example.com/apply",
             "skills": [
                 {
@@ -95,7 +107,11 @@ if (!collectionExists) {
             "offerContractType": "INTERNSHIP",
             "offerContract": "Part-time",
             "offerOperatingMode": "REMOTE",
-            "offerSalaryRange": "2200-3000USD",
+            "offerSalaryRange": {
+                "currency": "USD",
+                "salaryFrom": 2100,
+                "salaryTo": 2900
+            },
             "applyLink": "https://example.com/apply",
             "skills": [
                 {
@@ -122,7 +138,11 @@ if (!collectionExists) {
             "offerContractType": "B2B",
             "offerContract": "Full-time",
             "offerOperatingMode": "ON-SITE",
-            "offerSalaryRange": "2800-3700USD",
+            "offerSalaryRange": {
+                "currency": "EUR",
+                "salaryFrom": 2100,
+                "salaryTo": 2900
+            },
             "applyLink": "https://example.com/apply",
             "skills": [
                 {
@@ -149,7 +169,11 @@ if (!collectionExists) {
             "offerContractType": "PERMANENT",
             "offerContract": "Full-time",
             "offerOperatingMode": "REMOTE",
-            "offerSalaryRange": "2500-3400USD",
+            "offerSalaryRange": {
+                "currency": "USD",
+                "salaryFrom": 2100,
+                "salaryTo": 2900
+            },
             "applyLink": "https://example.com/apply",
             "skills": [
                 {
@@ -176,7 +200,11 @@ if (!collectionExists) {
             "offerContractType": "B2B",
             "offerContract": "Full-time",
             "offerOperatingMode": "HYBRID",
-            "offerSalaryRange": "3000-3900USD",
+            "offerSalaryRange": {
+                "currency": "PLN",
+                "salaryFrom": 2100,
+                "salaryTo": 2900
+            },
             "applyLink": "https://example.com/apply",
             "skills": [
                 {
@@ -203,7 +231,11 @@ if (!collectionExists) {
             "offerContractType": "PERMANENT",
             "offerContract": "Full-time",
             "offerOperatingMode": "REMOTE",
-            "offerSalaryRange": "2200-3100USD",
+            "offerSalaryRange": {
+                "currency": "EUR",
+                "salaryFrom": 2100,
+                "salaryTo": 2900
+            },
             "applyLink": "https://example.com/apply",
             "skills": [
                 {
@@ -230,7 +262,11 @@ if (!collectionExists) {
             "offerContractType": "B2B",
             "offerContract": "Full-time",
             "offerOperatingMode": "HYBRID",
-            "offerSalaryRange": "2800-3700USD",
+            "offerSalaryRange": {
+                "currency": "PLN",
+                "salaryFrom": 2100,
+                "salaryTo": 2900
+            },
             "applyLink": "https://example.com/apply",
             "skills": [
                 {
@@ -257,7 +293,11 @@ if (!collectionExists) {
             "offerContractType": "INTERNSHIP",
             "offerContract": "Part-time",
             "offerOperatingMode": "ON-SITE",
-            "offerSalaryRange": "2000-2800USD",
+            "offerSalaryRange": {
+                "currency": "USD",
+                "salaryFrom": 3100,
+                "salaryTo": 24200
+            },
             "applyLink": "https://example.com/apply",
             "skills": [
                 {
@@ -284,7 +324,11 @@ if (!collectionExists) {
             "offerContractType": "B2B",
             "offerContract": "Full-time",
             "offerOperatingMode": "REMOTE",
-            "offerSalaryRange": "3500-4500USD",
+            "offerSalaryRange": {
+                "currency": "YANG",
+                "salaryFrom": 2100,
+                "salaryTo": 2900
+            },
             "applyLink": "https://example.com/apply",
             "skills": [
                 {
@@ -311,7 +355,11 @@ if (!collectionExists) {
             "offerContractType": "PERMANENT",
             "offerContract": "Full-time",
             "offerOperatingMode": "ON-SITE",
-            "offerSalaryRange": "2200-3000USD",
+            "offerSalaryRange": {
+                "currency": "PLN",
+                "salaryFrom": 21000,
+                "salaryTo": 35000
+            },
             "applyLink": "https://example.com/apply",
             "skills": [
                 {
