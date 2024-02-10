@@ -4,7 +4,7 @@ from typing import List
 from common.config import Config
 from models.offer import JobOffer, JobOfferResponse
 from models.search import SearchOffer
-from mappers.offerMapper import offerSerialMapper, genericMapper
+from mappers.offerMapper import genericSerialMapper, genericMapper
 
 
 class OfferRepository():
@@ -21,28 +21,25 @@ class OfferRepository():
 
     def insert(self, newOffer: JobOffer) -> ObjectId:
         """ Insert new offer """
-        #offer_dict = dict(newOffer)
-        #offer_dict["offerCompany"] = dict(newOffer.offerCompany)
         result = self.mongoCollection.insert_one(genericMapper(newOffer.model_dump()))
         return result.inserted_id
         
-    def getAll(self, limit: int) -> List[JobOfferResponse]:
+    def getAll(self, limit: int, skip: int) -> List[JobOfferResponse]:
         """ Get all offers """
-        cursor = self.mongoCollection.find().limit(limit)
+        cursor = self.mongoCollection.find().skip(skip).limit(limit)
         result = list(cursor)
-        return offerSerialMapper(result) if result is not None else None
+        return genericSerialMapper(result) if result is not None else None
 
     def getByID(self, offerID:str):
         """ Get offer by ID """
         result = self.mongoCollection.find_one({"_id": ObjectId(offerID)})
-        #return offerSingleMapper(result) if result else None
         return genericMapper(result) if result else None
 
-    def getByCriteria(self, filterObject: SearchOffer, limit: int) -> List[JobOfferResponse]:
+    def getByCriteria(self, filterObject: SearchOffer, limit: int, skip: int) -> List[JobOfferResponse]:
         """ Get offer by criteria object """
-        cursor = self.mongoCollection.find(filterObject.model_dump(exclude_unset=True)).limit(limit)
+        cursor = self.mongoCollection.find(filterObject.model_dump(exclude_unset=True)).skip(skip).limit(limit)
         result = list(cursor)
-        return offerSerialMapper(result) if result else None
+        return genericSerialMapper(result) if result else None
 
     def updateByID(self, offerID: str, updatedOffer: JobOffer) -> bool:
         """ Update offer """
