@@ -7,3 +7,5 @@ class Skills(BaseModel):
     """ Required skills model """
     name: str
     level: int
+    importance: str 
+
