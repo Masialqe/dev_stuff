@@ -7,6 +7,7 @@ class Skills(BaseModel):
     """ Required skills model """
     name: str
     level: int
+    importance: str
 
     @validator("level")
     def validateLevel(cls, value):
