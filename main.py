@@ -1,7 +1,9 @@
 from fastapi import FastAPI
+from fastapi.exceptions import RequestValidationError
 from common.config import Config
 from fastapi.middleware.cors import CORSMiddleware
 from routes.offersRoute import router
+from models.handlers.exceptionHandlers import handleValidationError
 import uvicorn
 
 #create app 
@@ -17,6 +19,9 @@ app.add_middleware(
     allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["*"]
 )
+
+#add exepcetion handling
+app.add_exception_handler(RequestValidationError, handleValidationError)
 
 #add routes
 app.include_router(router, prefix="/api/v1")

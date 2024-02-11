@@ -3,8 +3,10 @@ sys.path.append('.')
 from pydantic import BaseModel
 from typing import Optional
 from fastapi import HTTPException
+from fastapi.exceptions import RequestValidationError
 from pydantic import ValidationError
 from common.logging import InternalLogging
+from starlette import status
 
 
 class ApiResponse(BaseModel):
@@ -22,15 +24,15 @@ class ApiResponse(BaseModel):
 
         if isinstance(exception, HTTPException):
             response.status = exception.status_code
-            response.content = {"details": str(exception)}
-        elif isinstance(exception, ValidationError):
-            response.status = 422
-            response.validation_error = {"details": str(exception.errors())}
+
+        elif isinstance(exception, RequestValidationError):
+            response.status = status.HTTP_422_UNPROCESSABLE_ENTITY
+           
         else:
-            response.status = 500
-            response.content = {"details": str(exception)}
+            response.status = status.HTTP_500_INTERNAL_SERVER_ERROR
             logger.error(f"Internal Server Error: [EX]: {exception}")
 
+        response.content = {"details": str(exception)}
         return response
     
     @classmethod
