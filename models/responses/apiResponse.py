@@ -4,7 +4,6 @@ from pydantic import BaseModel
 from typing import Optional
 from fastapi import HTTPException
 from fastapi.exceptions import RequestValidationError
-from pydantic import ValidationError
 from common.logging import InternalLogging
 from starlette import status
 

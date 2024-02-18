@@ -39,8 +39,9 @@ class JobOffer(BaseModel):
     
     @classmethod
     def _validateValue(cls, value, enumType):
+        """ Validate given value against given enum"""
         validValues = [member.value for member in enumType]
-        if value not in validValues:
+        if value.upper() not in validValues:
             raise ValueError(f"Invalid value, should be one of: {validValues}")
         return value
 
