@@ -14,6 +14,7 @@ if (!collectionExists) {
             "offerContractType": "B2B",
             "offerContract": "Full-time",
             "offerOperatingMode": "REMOTE",
+            "offerPlaceOfWork": "KRAKOW",
             "offerSalaryRange": {
                 "currency": "USD",
                 "salaryFrom": 4100,
@@ -23,11 +24,13 @@ if (!collectionExists) {
             "skills": [
                 {
                     "name": "Programming",
-                    "level": 4
+                    "level": 4,
+                    "importance": "REQUIRED"
                 },
                 {
                     "name": "Problem Solving",
-                    "level": 3
+                    "level": 3,
+                    "importance": "REQUIRED"
                 }
             ],
             "offerCompany": {
@@ -45,6 +48,7 @@ if (!collectionExists) {
             "offerContractType": "INTERNSHIP",
             "offerContract": "Part-time",
             "offerOperatingMode": "ON-SITE",
+            "offerPlaceOfWork": "WARSAW",
             "offerSalaryRange": {
                 "currency": "PLN",
                 "salaryFrom": 2100,
@@ -54,11 +58,13 @@ if (!collectionExists) {
             "skills": [
                 {
                     "name": "Data Analysis",
-                    "level": 2
+                    "level": 2,
+                    "importance": "REQUIRED"
                 },
                 {
                     "name": "Statistics",
-                    "level": 3
+                    "level": 3,
+                    "importance": "OPTIONAL"
                 }
             ],
             "offerCompany": {
@@ -76,6 +82,7 @@ if (!collectionExists) {
             "offerContractType": "PERMANENT",
             "offerContract": "Full-time",
             "offerOperatingMode": "HYBRID",
+            "offerPlaceOfWork": "KRAKOW",
             "offerSalaryRange": {
                 "currency": "PLN",
                 "salaryFrom": 2100,
@@ -85,11 +92,13 @@ if (!collectionExists) {
             "skills": [
                 {
                     "name": "Mobile App Development",
-                    "level": 4
+                    "level": 4,
+                    "importance": "REQUIRED"
                 },
                 {
                     "name": "UI/UX Design",
-                    "level": 3
+                    "level": 3,
+                    "importance": "OPTIONAL"
                 }
             ],
             "offerCompany": {
@@ -107,6 +116,7 @@ if (!collectionExists) {
             "offerContractType": "INTERNSHIP",
             "offerContract": "Part-time",
             "offerOperatingMode": "REMOTE",
+            "offerPlaceOfWork": "WARSAW",
             "offerSalaryRange": {
                 "currency": "USD",
                 "salaryFrom": 2100,
@@ -116,11 +126,13 @@ if (!collectionExists) {
             "skills": [
                 {
                     "name": "Machine Learning",
-                    "level": 2
+                    "level": 2,
+                    "importance": "REQUIRED"
                 },
                 {
                     "name": "Python Programming",
-                    "level": 3
+                    "level": 3,
+                    "importance": "REQUIRED"
                 }
             ],
             "offerCompany": {
@@ -138,6 +150,7 @@ if (!collectionExists) {
             "offerContractType": "B2B",
             "offerContract": "Full-time",
             "offerOperatingMode": "ON-SITE",
+            "offerPlaceOfWork": "POZNAN",
             "offerSalaryRange": {
                 "currency": "EUR",
                 "salaryFrom": 2100,
@@ -147,11 +160,13 @@ if (!collectionExists) {
             "skills": [
                 {
                     "name": "Quality Assurance",
-                    "level": 4
+                    "level": 4,
+                    "importance": "OPTIONAL"
                 },
                 {
                     "name": "Automated Testing",
-                    "level": 3
+                    "level": 3,
+                    "importance": "OPTIONAL"
                 }
             ],
             "offerCompany": {
@@ -169,6 +184,7 @@ if (!collectionExists) {
             "offerContractType": "PERMANENT",
             "offerContract": "Full-time",
             "offerOperatingMode": "REMOTE",
+            "offerPlaceOfWork": "KRAKOW",
             "offerSalaryRange": {
                 "currency": "USD",
                 "salaryFrom": 2100,
@@ -178,11 +194,13 @@ if (!collectionExists) {
             "skills": [
                 {
                     "name": "User Experience Design",
-                    "level": 3
+                    "level": 3,
+                    "importance": "OPTIONAL"
                 },
                 {
                     "name": "Wireframing",
-                    "level": 2
+                    "level": 2,
+                    "importance": "REQUIRED"
                 }
             ],
             "offerCompany": {
@@ -200,6 +218,7 @@ if (!collectionExists) {
             "offerContractType": "B2B",
             "offerContract": "Full-time",
             "offerOperatingMode": "HYBRID",
+            "offerPlaceOfWork": "WARSAW",
             "offerSalaryRange": {
                 "currency": "PLN",
                 "salaryFrom": 2100,
@@ -209,11 +228,13 @@ if (!collectionExists) {
             "skills": [
                 {
                     "name": "Mobile App Development",
-                    "level": 5
+                    "level": 5,
+                    "importance": "OPTIONAL"
                 },
                 {
                     "name": "React Native",
-                    "level": 4
+                    "level": 4,
+                    "importance": "REQUIRED"
                 }
             ],
             "offerCompany": {
@@ -231,6 +252,7 @@ if (!collectionExists) {
             "offerContractType": "PERMANENT",
             "offerContract": "Full-time",
             "offerOperatingMode": "REMOTE",
+            "offerPlaceOfWork": "RZESZOW",
             "offerSalaryRange": {
                 "currency": "EUR",
                 "salaryFrom": 2100,
@@ -240,11 +262,13 @@ if (!collectionExists) {
             "skills": [
                 {
                     "name": "Cloud Computing",
-                    "level": 2
+                    "level": 2,
+                    "importance": "OPTIONAL"
                 },
                 {
                     "name": "AWS",
-                    "level": 3
+                    "level": 3,
+                    "importance": "REQUIRED"
                 }
             ],
             "offerCompany": {
@@ -262,6 +286,7 @@ if (!collectionExists) {
             "offerContractType": "B2B",
             "offerContract": "Full-time",
             "offerOperatingMode": "HYBRID",
+            "offerPlaceOfWork": "KIELCE",
             "offerSalaryRange": {
                 "currency": "PLN",
                 "salaryFrom": 2100,
@@ -271,11 +296,13 @@ if (!collectionExists) {
             "skills": [
                 {
                     "name": "Software Architecture",
-                    "level": 4
+                    "level": 4,
+                    "importance": "OPTIONAL"
                 },
                 {
                     "name": "System Design",
-                    "level": 3
+                    "level": 3,
+                    "importance": "REQUIRED"
                 }
             ],
             "offerCompany": {
@@ -293,6 +320,7 @@ if (!collectionExists) {
             "offerContractType": "INTERNSHIP",
             "offerContract": "Part-time",
             "offerOperatingMode": "ON-SITE",
+            "offerPlaceOfWork": "KRAKOW",
             "offerSalaryRange": {
                 "currency": "USD",
                 "salaryFrom": 3100,
@@ -302,11 +330,13 @@ if (!collectionExists) {
             "skills": [
                 {
                     "name": "Data Analysis",
-                    "level": 2
+                    "level": 2,
+                    "importance": "OPTIONAL"
                 },
                 {
                     "name": "SQL",
-                    "level": 2
+                    "level": 2,
+                    "importance": "OPTIONAL"
                 }
             ],
             "offerCompany": {
@@ -324,6 +354,7 @@ if (!collectionExists) {
             "offerContractType": "B2B",
             "offerContract": "Full-time",
             "offerOperatingMode": "REMOTE",
+            "offerPlaceOfWork": "WARSAW",
             "offerSalaryRange": {
                 "currency": "YANG",
                 "salaryFrom": 2100,
@@ -333,11 +364,13 @@ if (!collectionExists) {
             "skills": [
                 {
                     "name": "Artificial Intelligence",
-                    "level": 5
+                    "level": 5,
+                    "importance": "REQUIRED"
                 },
                 {
                     "name": "Machine Learning",
-                    "level": 4
+                    "level": 4,
+                    "importance": "REQUIRED"
                 }
             ],
             "offerCompany": {
@@ -355,6 +388,7 @@ if (!collectionExists) {
             "offerContractType": "PERMANENT",
             "offerContract": "Full-time",
             "offerOperatingMode": "ON-SITE",
+            "offerPlaceOfWork": "KRAKOW",
             "offerSalaryRange": {
                 "currency": "PLN",
                 "salaryFrom": 21000,
@@ -364,11 +398,13 @@ if (!collectionExists) {
             "skills": [
                 {
                     "name": "Mobile App Testing",
-                    "level": 2
+                    "level": 2,
+                    "importance": "REQUIRED"
                 },
                 {
                     "name": "Test Automation",
-                    "level": 2
+                    "level": 2,
+                    "importance": "REQUIRED"
                 }
             ],
             "offerCompany": {
