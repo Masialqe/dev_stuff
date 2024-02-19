@@ -12,15 +12,11 @@ def genericMapper(object) -> dict:
     """ Map values from given object to dict """
     result = {"id": str(object.pop("_id"))} if "_id" in object else {}
     for key, value in object.items():
-        if isinstance(value, BaseModel):
-            if isinstance(value, List):
-                result[key] = [genericMapper(item.model_dump()) if isinstance(item, BaseModel) else item for item in value]
-            else:
-                result[key] = genericMapper(value.model_dump())
+        if isinstance(value, List):
+            result[key] = [genericMapper(item.model_dump()) if isinstance(item, BaseModel) else item for item in value]
         else:
             result[key] = value
     return result
-
 
     
 
